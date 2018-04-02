@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/logintemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome To Mansopresk App"
+        android:gravity="center"
+        android:textColor="#56bcbc"
+        android:layout_marginTop="80dp"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:layout_marginTop="80dp">
+        <EditText
+            android:id="@+id/lmemid"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Referal Id Or Member Id"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:textColorHint="#000"
+            android:drawableLeft="@drawable/tempuser"
+            android:drawablePadding="20dp"
+            android:background="@drawable/loginshape"/>
+        <EditText
+            android:id="@+id/lmobile"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Mobile Number"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#000"
+            android:drawableLeft="@drawable/tempuser"
+            android:drawablePadding="20dp"
+            android:background="@drawable/loginshape"/>
+        <EditText
+            android:id="@+id/lpwd"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:drawableLeft="@drawable/key"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:drawablePadding="20dp"
+            android:background="@drawable/loginshape"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:layout_marginTop="13dp"
+            android:inputType="text"
+            android:gravity="end"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layoutshape"
+            android:layout_marginTop="20dp"
+            android:textColor="#56bcbc"
+            android:text="Login"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/btnlayout"
+            android:layout_marginTop="20dp">
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:background="#56bcbc"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:textColor="#56bcbc"/>
+            <View
+                android:id="@+id/viewline"
+                android:layout_width="120dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:background="#56bcbc"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/registernow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NOT A MEMBER , REGISTER NOW"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

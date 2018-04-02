@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/colo"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#56BCBC"
+        android:layout_marginTop="60dp"
+        android:textColor="#fff"
+        android:text="Placements"/>
+
+    <TableLayout
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TableRow
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_weight="0.5"
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:text="Highest Package"/>
+
+            <TextView
+                android:layout_weight="0.5"
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:text="Rs.350000.0" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_weight="0.5"
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:text="Average Package"/>
+
+            <TextView
+                android:layout_weight="0.5"
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:text="Rs.300000.0" />
+        </TableRow>
+    </TableLayout>
+    <!--<TableLayout-->
+    <!--android:background="@drawable/colo"-->
+    <!--android:layout_marginTop="25dp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<TableRow>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:textSize="20sp"-->
+    <!--android:text="Average Package"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv4"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textSize="20sp"-->
+    <!--android:text="300000.0" />-->
+    <!--</TableRow>-->
+    <!--</TableLayout>-->
+
+    <Button
+        android:id="@+id/top"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Top companies"
+        android:background="#56BCBC"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/tcs"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_marginLeft="25dp"/>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/floatingActionButton"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_marginEnd="11dp"-->
+            <!--android:layout_marginRight="11dp"-->
+            <!--android:layout_marginTop="12dp"-->
+            <!--android:clickable="true"-->
+            <!--app:srcCompat="@android:drawable/sym_call_outgoing" />-->
+
+    <!--</RelativeLayout>-->
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="30dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilepic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:src="@drawable/rounduser"
+            app:civ_border_width="1dp"
+            app:civ_border_color="#d4c7c7"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Referal Id or Member Id"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/refid" />
+            <Spinner
+                android:id="@+id/instutespin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:background="#56bcbc"
+                android:popupBackground="#fff"
+                android:paddingLeft="20dp"
+                android:entries="@array/spinner_item"
+                android:theme="@drawable/loginshape" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Stream"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/stream" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Name of Applicant"
+                android:background="@drawable/loginshape"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/edtname" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Password"
+                android:paddingLeft="20dp"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:layout_marginTop="5dp"
+                android:id="@+id/edtPass"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Date Of Birth"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:paddingLeft="20dp"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:id="@+id/edtdob"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Current Address"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:id="@+id/caddress"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="PinCode"
+                android:inputType="number"
+                android:singleLine="true"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:id="@+id/edtpin"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Phone no"
+                android:layout_marginTop="5dp"
+                android:inputType="number"
+                android:singleLine="true"
+                android:paddingLeft="20dp"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:id="@+id/edtphno"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Mobile no"
+                android:inputType="number"
+                android:singleLine="true"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:id="@+id/mobileno"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:layout_marginTop="5dp"
+                android:hint="Email Id"
+                android:inputType="text"
+                android:singleLine="true"
+                android:paddingLeft="20dp"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:id="@+id/edtemail"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Permanent Address"
+                android:inputType="text"
+                android:singleLine="true"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:background="@drawable/loginshape"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:id="@+id/paddress"
+                />
+            <Spinner
+                android:id="@+id/eduqualispin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:background="#56bcbc"
+                android:popupBackground="#fff"
+                android:paddingLeft="20dp"
+                android:entries="@array/eduspinner_item"
+                android:theme="@drawable/loginshape" />
+            <Spinner
+                android:id="@+id/applyspin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:background="#56bcbc"
+                android:popupBackground="#fff"
+                android:paddingLeft="20dp"
+                android:entries="@array/apply_item"
+                android:theme="@drawable/loginshape" />
+            <Spinner
+                android:id="@+id/locspin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:background="#56bcbc"
+                android:popupBackground="#fff"
+                android:paddingLeft="20dp"
+                android:entries="@array/loc_item"
+                android:theme="@drawable/loginshape" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terms and Conditions"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:layout_marginTop="10dp"
+                android:onClick="r1"
+                android:textColor="#000"
+                android:layout_marginBottom="100dp"
+                android:background="#9f9e89"
+                android:textAllCaps="false"
+                tools:ignore="OnClick" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+    </LinearLayout>
+
