@@ -98,9 +98,10 @@
                         android:layout_height="60dp"
                         android:layout_marginTop="5dp"
                         android:background="#56bcbc"
-                        android:popupBackground="#56bcbc"
+                        android:popupBackground="#b5c1c1"
                         android:paddingLeft="20dp"
-                        style="@style/spinnerItemStyle"
+                        android:backgroundTint="#56bcbc"
+                        android:theme="@style/mySpinnerItemStyle"
                         android:entries="@array/spinner_item" />
                 </LinearLayout>
                 <LinearLayout
