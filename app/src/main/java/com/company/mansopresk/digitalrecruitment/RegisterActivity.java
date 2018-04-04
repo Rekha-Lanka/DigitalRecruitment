@@ -95,7 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
         dob = findViewById(R.id.edtdob);
         caddr = findViewById(R.id.caddress);
         pin = findViewById(R.id.edtpin);
-        phno = findViewById(R.id.edtphno);
+        //phno = findViewById(R.id.edtphno);
         mobileno = findViewById(R.id.mobileno);
         email = findViewById(R.id.edtemail);
         paddr = findViewById(R.id.paddress);
@@ -256,7 +256,7 @@ public class RegisterActivity extends AppCompatActivity {
                         sdob = dob.getText().toString();
                         scaddr = caddr.getText().toString();
                         spin = pin.getText().toString();
-                        sphno = phno.getText().toString();
+                        //sphno = phno.getText().toString();
                         smobile = mobileno.getText().toString();
                         smail = email.getText().toString();
                         spaddr = paddr.getText().toString();
@@ -296,10 +296,12 @@ public class RegisterActivity extends AppCompatActivity {
         } else if (pin.getText().toString().isEmpty()) {
             showSnackbar(pin, "please enter pin code", 40000);
             return false;
-        } else if (phno.getText().toString().isEmpty()) {
-            showSnackbar(phno, "please enter Mobile number", 40000);
-            return false;
-        } else if (mobileno.equals("")) {
+        }
+//        else if (phno.getText().toString().isEmpty()) {
+//            showSnackbar(phno, "please enter Mobile number", 40000);
+//            return false;
+//        }
+        else if (mobileno.equals("")) {
             showSnackbar(mobileno, "Please enter your mobile number", 4000);
             return false;
         } else if (mobileno.length() != 10) {
@@ -336,7 +338,7 @@ public class RegisterActivity extends AppCompatActivity {
             editor.putString("rdob", sdob);
             editor.putString("rcaddress", scaddr);
             editor.putString("rpin", spin);
-            editor.putString("rphno", sphno);
+            //editor.putString("rphno", sphno);
             editor.putString("rmobile", smobile);
             editor.putString("rmail", smail);
             editor.putString("rpaddr", spaddr);

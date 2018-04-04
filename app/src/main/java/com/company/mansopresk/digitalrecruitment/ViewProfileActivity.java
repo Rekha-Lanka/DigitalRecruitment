@@ -55,7 +55,7 @@ public class ViewProfileActivity extends AppCompatActivity {
         dob = findViewById(R.id.pdob);
         caddr = findViewById(R.id.pcaddress);
         pin = findViewById(R.id.ppin);
-        phno = findViewById(R.id.pphno);
+       // phno = findViewById(R.id.pphno);
         mobileno = findViewById(R.id.pmobileno);
         email = findViewById(R.id.pemail);
         paddr = findViewById(R.id.paddress);
@@ -77,7 +77,7 @@ public class ViewProfileActivity extends AppCompatActivity {
         sdob = shre.getString("rdob", null);
         scaddr = shre.getString("rcaddress", null);
         spin = shre.getString("rpin", null);
-        sphno = shre.getString("rphno", null);
+        //sphno = shre.getString("rphno", null);
         smobile = shre.getString("rmobile", null);
         smail = shre.getString("rmail", null);
         spaddr = shre.getString("rpaddr", null);
@@ -92,7 +92,7 @@ public class ViewProfileActivity extends AppCompatActivity {
         dob.setText(sdob);
         caddr.setText(scaddr);
         pin.setText(spin);
-        phno.setText(sphno);
+        //phno.setText(sphno);
         mobileno.setText(smobile);
         email.setText(smail);
         paddr.setText(spaddr);
