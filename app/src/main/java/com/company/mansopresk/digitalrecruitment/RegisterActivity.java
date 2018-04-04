@@ -1,6 +1,9 @@
 package com.company.mansopresk.digitalrecruitment;
 
 import android.app.Activity;
+
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,6 +21,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +31,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -42,6 +47,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Calendar;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -49,6 +55,8 @@ import java.util.regex.Pattern;
 public class RegisterActivity extends AppCompatActivity {
     Button register;
     String image;
+    private Calendar calendar;
+    private int year, month, day;
 
     public static final int CAM_REQ_CODE = 123;
     public static final int GAL_REQ_CODE = 321;
@@ -88,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         iv1 = findViewById(R.id.iv1);
-        refid = findViewById(R.id.refid);
+       refid = findViewById(R.id.refid);
         stream = findViewById(R.id.stream);
         etname = findViewById(R.id.edtname);
         etpassword = findViewById(R.id.edtPass);
@@ -104,6 +112,13 @@ public class RegisterActivity extends AppCompatActivity {
         applyspin = findViewById(R.id.applyspin);
         locspin = findViewById(R.id.locspin);
         checkBox = findViewById(R.id.checkbox);
+
+        calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+        showDate(year, month+1, day);
 
 
         // Initializing an ArrayAdapter
@@ -124,9 +139,44 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+    public void setDate(View view) {
+        showDialog(999);
+
+    }
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        // TODO Auto-generated method stub
+        if (id == 999) {
+            return new DatePickerDialog(this,
+                    myDateListener, year, month, day);
+        }
+        return null;
+    }
+
+    private DatePickerDialog.OnDateSetListener myDateListener = new
+            DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker arg0,
+                                      int arg1, int arg2, int arg3) {
+
+                    // TODO Auto-generated method stub
+                    // arg1 = year
+                    // arg2 = month
+                    // arg3 = day
+                    showDate(arg1, arg2+1, arg3);
+
+                }
+            };
+
+    private void showDate(int year, int month, int day) {
+        dob.setText(new StringBuilder().append(day).append("/")
+                .append(month).append("/").append(year));
+    }
 
 
-    //        register.setOnClickListener(new View.OnClickListener() {
+
+        //        register.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //
@@ -330,7 +380,7 @@ public class RegisterActivity extends AppCompatActivity {
         } else if (checkBox.isChecked()) {
 
             Intent i = new Intent(RegisterActivity.this, LoginActivity.class);
-            SharedPreferences preferences = getSharedPreferences("regdetails", MODE_PRIVATE);
+            SharedPreferences preferences = getSharedPreferences("userdetails", MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
             editor.putString("rrefid", srefid);
             editor.putString("rstream", sstream);

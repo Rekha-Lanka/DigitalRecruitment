@@ -33,42 +33,46 @@
         android:layout_margin="30dp"
         android:layout_marginTop="80dp">
         <EditText
+
+            android:textColor="#fff"
             android:id="@+id/lmemid"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:hint="Referal Id Or Member Id"
             android:paddingLeft="10dp"
             android:singleLine="true"
             android:inputType="number"
-            android:textColorHint="#000"
+            android:textColorHint="#fff"
             android:drawableLeft="@drawable/tempuser"
             android:drawablePadding="20dp"
             android:background="@drawable/loginshape"/>
         <EditText
+            android:textColor="#fff"
             android:id="@+id/lmobile"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:hint="Mobile Number"
             android:inputType="number"
             android:paddingLeft="10dp"
             android:singleLine="true"
             android:maxLength="10"
             android:layout_marginTop="10dp"
-            android:textColorHint="#000"
+            android:textColorHint="#fff"
             android:drawableLeft="@drawable/tempuser"
             android:drawablePadding="20dp"
             android:background="@drawable/loginshape"/>
         <EditText
+            android:textColor="#fff"
             android:id="@+id/lpwd"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:hint="Password"
             android:inputType="textPassword"
             android:layout_marginTop="10dp"
             android:singleLine="true"
             android:drawableLeft="@drawable/key"
             android:paddingLeft="10dp"
-            android:textColorHint="#000"
+            android:textColorHint="#fff"
             android:drawablePadding="20dp"
             android:background="@drawable/loginshape"/>
 
@@ -86,7 +90,7 @@
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:background="@drawable/layoutshape"
             android:layout_marginTop="20dp"
             android:textColor="#56bcbc"

@@ -44,7 +44,7 @@
                             android:id="@+id/mainrefid"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Id:6"
+
                             android:layout_gravity="center"
                             android:textColor="#000"
                             android:textSize="20dp"/>
@@ -53,7 +53,6 @@
                             android:layout_marginTop="20dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Ravi"
                             android:textColor="#000"
                             android:textSize="20dp"/>
 

@@ -22,6 +22,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 public class ViewProfileActivity extends AppCompatActivity {
@@ -204,5 +205,23 @@ public class ViewProfileActivity extends AppCompatActivity {
 
 
         }
+        iv3.buildDrawingCache();
+        Bitmap bitmap = iv3.getDrawingCache();
+        ByteArrayOutputStream stream=new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 90, stream);
+        byte[] image=stream.toByteArray();
+
+        String img_str = Base64.encodeToString(image, 0);
+        //decode string to image
+        String base=img_str;
+        byte[] imageAsBytes = Base64.decode(base.getBytes(), Base64.DEFAULT);
+//        ImageView ivsavedphoto = (ImageView)this.findViewById(R.id.iv2);
+//        ivsavedphoto.setImageBitmap(BitmapFactory.decodeByteArray(imageAsBytes,0, imageAsBytes.length)
+//        );
+        SharedPreferences preferences = getSharedPreferences("myprefs",MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("userphoto",img_str);
+        editor.commit();
+
     }
 }

@@ -350,10 +350,11 @@
                         android:layout_height="60dp"
                         android:layout_marginTop="5dp"
                         android:background="#56bcbc"
-                        android:popupBackground="#fff"
+
                         android:paddingLeft="20dp"
+                        android:popupBackground="#b5c1c1"
                         android:entries="@array/eduspinner_item"
-                        android:theme="@drawable/loginshape" />
+                        android:theme="@style/mySpinnerItemStyle" />
 
 
                 </LinearLayout>
@@ -377,10 +378,10 @@
                         android:layout_height="60dp"
                         android:layout_marginTop="5dp"
                         android:background="#56bcbc"
-                        android:popupBackground="#fff"
+                        android:popupBackground="#b5c1c1"
                         android:paddingLeft="20dp"
                         android:entries="@array/apply_item"
-                        android:theme="@drawable/loginshape" />
+                        android:theme="@style/mySpinnerItemStyle" />
 
 
 
@@ -405,10 +406,10 @@
                         android:layout_height="60dp"
                         android:layout_marginTop="5dp"
                         android:background="#56bcbc"
-                        android:popupBackground="#fff"
+                        android:popupBackground="#b5c1c1"
                         android:paddingLeft="20dp"
                         android:entries="@array/loc_item"
-                        android:theme="@drawable/loginshape" />
+                        android:theme="@style/mySpinnerItemStyle"/>
 
 
 

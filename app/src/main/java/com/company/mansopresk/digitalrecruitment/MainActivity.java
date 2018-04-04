@@ -54,9 +54,10 @@ public class MainActivity extends Activity {
 
 
 
-
         shre = getSharedPreferences("userdetails", MODE_PRIVATE);
             String loginid = shre.getString("refid", null);
+            String name=shre.getString("rname",null);
+            mainname.setText(name);
             mainrefid.setText(loginid);
             findViewById(R.id.alljobs).setOnClickListener(new View.OnClickListener() {
                 @Override

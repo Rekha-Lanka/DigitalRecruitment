@@ -1,62 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout        xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+
     android:orientation="vertical">
-<ScrollView android:layout_width="match_parent"
+    <ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
         android:layout_marginBottom="30dp"
-        android:background="#fff"
 
         android:orientation="vertical">
-
-        <!--<ImageView-->
-            <!--android:id="@+id/iv1"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:paddingTop="8dp"-->
-            <!--android:src="@drawable/rounduser"-->
-            <!--android:onClick="camera"/>-->
-       <!--<LinearLayout -->
-           <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:gravity="center">-->
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/iv1"
+            android:layout_marginTop="25dp"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:src="@drawable/rounduser"
             android:layout_gravity="center"
-            app:civ_border_width="1dp"
+            android:onClick="camera"
+            android:src="@drawable/rounduser"
             app:civ_border_color="#d4c7c7"
-            android:onClick="camera"/>
-
-
-
-
-
-    <!--<de.hdodenhof.circleimageview.CircleImageView-->
-
-            <!--android:id="@+id/iv1"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:gravity="center"-->
-            <!--android:src="@drawable/rounduser"-->
-            <!--app:civ_border_width="1dp"-->
-            <!--android:onClick="selectImage"-->
-            <!--app:civ_border_color="#d4c7c7"/>-->
-
+            app:civ_border_width="1dp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -64,186 +36,307 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:gravity="center">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:hint="Referal Id or Member Id"
-                android:background="@drawable/loginshape"
-                android:textColorHint="#000"
-                android:inputType="number"
-                android:singleLine="true"
-                android:textColor="#000"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="30dp"
-                android:id="@+id/refid" />
-            <Spinner
-                android:id="@+id/instutespin"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                android:background="#56bcbc"
-                android:popupBackground="#fff"
-                android:paddingLeft="20dp"
-                android:entries="@array/spinner_item"
-                android:theme="@drawable/loginshape" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:hint="Stream"
-                android:background="@drawable/loginshape"
-                android:textColorHint="#000"
-                android:inputType="text"
-                android:singleLine="true"
-                android:textColor="#000"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/stream" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:hint="Name of Applicant"
-                android:background="@drawable/loginshape"
-                android:inputType="text"
+                android:hint="Referal Id Or Member Id"
+                android:id="@+id/refid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:backgroundTint="#56bcbc"
+                android:padding="10dp"
                 android:singleLine="true"
-                android:textColorHint="#000"
-                android:textColor="#000"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/edtname" />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:hint="Password"
-                android:paddingLeft="20dp"
-                android:inputType="textPassword"
-                android:singleLine="true"
-                android:background="@drawable/loginshape"
-                android:textColorHint="#000"
-                android:textColor="#000"
-                android:layout_marginTop="5dp"
-                android:id="@+id/edtPass"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:hint="Date Of Birth"
-                android:layout_marginTop="5dp"
-                android:singleLine="true"
-                android:paddingLeft="20dp"
-                android:background="@drawable/loginshape"
-                android:textColorHint="#000"
-                android:textColor="#000"
-                android:id="@+id/edtdob"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:hint="Current Address"
-                android:layout_marginTop="5dp"
-                android:paddingLeft="20dp"
-                android:inputType="text"
-                android:singleLine="true"
-                android:background="@drawable/loginshape"
-                android:textColorHint="#000"
-                android:textColor="#000"
-                android:id="@+id/caddress"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:hint="PinCode"
                 android:inputType="number"
-                android:singleLine="true"
-                android:layout_marginTop="5dp"
-                android:paddingLeft="20dp"
-                android:background="@drawable/loginshape"
-                android:textColorHint="#000"
-                android:textColor="#000"
-                android:id="@+id/edtpin"
-                />
+                android:ems="35"
+                android:textColor="#56bcbc"
+                android:textColorHint="#56bcbc" />
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Institute :"/>
+                <Spinner
+                    android:id="@+id/instutespin"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
 
-            <EditText
+
+                    android:popupBackground="#fff"
+                    android:paddingLeft="20dp"
+                    android:backgroundTint="#56bcbc"
+                    android:theme="@style/mySpinnerItemStyles"
+                    android:entries="@array/spinner_item" />
+
+
+
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+
+                    android:hint="Stream"
+                    android:id="@+id/stream"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:backgroundTint="#56bcbc"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:ems="35"
+                    android:textColor="#56bcbc"
+                    android:textColorHint="#56bcbc" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+
+                    android:hint="Name of Applicant"
+                    android:id="@+id/edtname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:backgroundTint="#56bcbc"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:ems="35"
+                    android:textColor="#56bcbc"
+                    android:textColorHint="#56bcbc" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+
+                    android:hint="Password"
+                    android:id="@+id/edtPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:backgroundTint="#56bcbc"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:ems="35"
+                    android:textColor="#56bcbc"
+                    android:textColorHint="#56bcbc" />
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <Button
+                 android:textColorHint="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="dob"
+                android:onClick="setDate" />
+
+                <EditText
+
+                    android:hint="dd/mm/yyyy"
+                    android:id="@+id/edtdob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:backgroundTint="#56bcbc"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:ems="35"
+                    android:textColor="#56bcbc"
+                    android:textColorHint="#56bcbc" />
+
+            </LinearLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+
+                    android:hint="Current Address"
+                    android:id="@+id/caddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:backgroundTint="#56bcbc"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:ems="35"
+                    android:textColor="#56bcbc"
+                    android:textColorHint="#56bcbc" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+
+                    android:hint="PinCode"
+                    android:id="@+id/edtpin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:backgroundTint="#56bcbc"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:ems="35"
+                    android:textColor="#56bcbc"
+                    android:textColorHint="#56bcbc" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:maxLength="10"
+                    android:hint="Mobile no"
+
+
+                    android:id="@+id/mobileno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:backgroundTint="#56bcbc"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:ems="35"
+                    android:textColor="#56bcbc"
+                    android:textColorHint="#56bcbc" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:maxLength="10"
+                    android:hint="Email Id"
+
+
+                    android:id="@+id/edtemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:backgroundTint="#56bcbc"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:ems="35"
+                    android:textColor="#56bcbc"
+                    android:textColorHint="#56bcbc" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:maxLength="10"
+                    android:hint="Permanent Address"
+
+
+                    android:id="@+id/paddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:backgroundTint="#56bcbc"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:ems="35"
+                    android:textColor="#56bcbc"
+                    android:textColorHint="#56bcbc" />
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:hint="Mobile no"
-                android:inputType="number"
-                android:singleLine="true"
-                android:layout_marginTop="5dp"
-                android:paddingLeft="20dp"
-                android:background="@drawable/loginshape"
-                android:textColorHint="#000"
-                android:textColor="#000"
-                android:id="@+id/mobileno"
-                />
-            <EditText
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Qualification :"/>
+                <Spinner
+                    android:id="@+id/eduqualispin"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+
+
+                    android:popupBackground="#fff"
+                    android:paddingLeft="20dp"
+                    android:backgroundTint="#56bcbc"
+                    android:theme="@style/mySpinnerItemStyles"
+                    android:entries="@array/eduspinner_item" />
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:layout_marginTop="5dp"
-                android:hint="Email Id"
-                android:inputType="text"
-                android:singleLine="true"
-                android:paddingLeft="20dp"
-                android:background="@drawable/loginshape"
-                android:textColorHint="#000"
-                android:textColor="#000"
-                android:id="@+id/edtemail"
-                />
-            <EditText
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply For :"/>
+                <Spinner
+                    android:id="@+id/applyspin"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+
+
+                    android:popupBackground="#fff"
+                    android:paddingLeft="20dp"
+                    android:backgroundTint="#56bcbc"
+                    android:theme="@style/mySpinnerItemStyles"
+                    android:entries="@array/apply_item" />
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:ems="10"
-                android:hint="Permanent Address"
-                android:inputType="text"
-                android:singleLine="true"
-                android:layout_marginTop="5dp"
-                android:paddingLeft="20dp"
-                android:background="@drawable/loginshape"
-                android:textColorHint="#000"
-                android:textColor="#000"
-                android:id="@+id/paddress"
-                />
-            <Spinner
-                android:id="@+id/eduqualispin"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                android:background="#56bcbc"
-                android:popupBackground="#fff"
-                android:paddingLeft="20dp"
-                android:entries="@array/eduspinner_item"
-                android:theme="@drawable/loginshape" />
-            <Spinner
-                android:id="@+id/applyspin"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                android:background="#56bcbc"
-                android:popupBackground="#fff"
-                android:paddingLeft="20dp"
-                android:entries="@array/apply_item"
-                android:theme="@drawable/loginshape" />
-            <Spinner
-                android:id="@+id/locspin"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="5dp"
-                android:background="#56bcbc"
-                android:popupBackground="#fff"
-                android:paddingLeft="20dp"
-                android:entries="@array/loc_item"
-                android:theme="@drawable/loginshape" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Location :"/>
+                <Spinner
+                    android:id="@+id/locspin"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+
+
+                    android:popupBackground="#fff"
+                    android:paddingLeft="20dp"
+                    android:backgroundTint="#56bcbc"
+                    android:theme="@style/mySpinnerItemStyles"
+                    android:entries="@array/loc_item" />
+            </LinearLayout>
 
             <CheckBox
+                android:textSize="15dp"
+                android:textColor="@color/colorPrimaryDark"
                 android:id="@+id/checkbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -259,7 +352,7 @@
                 android:onClick="r1"
                 android:textColor="#000"
                 android:layout_marginBottom="100dp"
-                android:background="#9f9e89"
+                android:background="@color/colorPrimaryDark"
                 android:textAllCaps="false"
                 tools:ignore="OnClick" />
         </LinearLayout>
